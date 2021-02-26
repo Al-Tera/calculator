@@ -1,0 +1,151 @@
+input {
+  font-size: 7vh;
+  background: none;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(255, 166, 0, 0.555);
+  color: white;
+  margin-bottom: 5vh;
+  position: absolute;
+  top: 52.5%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+h1 {
+  color: grey;
+}
+
+.buttons {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 50%;
+  transform: translateX(-50%);
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: auto;
+  grid-template-areas:
+    "n0 n1 n2 division multiple"
+    "n3 n4 n5 minus addition"
+    "n6 n7 n8 clear clear"
+    "n9 period percent equal equal";
+}
+
+.buttons > button {
+  height: 50px;
+  /* width: 50px; */
+  border-radius: 5px 5px 5px 5px;
+  border: 1px solid orange;
+  margin: 5px;
+  background: none;
+  color: white;
+  box-shadow: 0 2px 2px rgb(66, 66, 66);
+}
+button:active {
+  background: rgba(128, 128, 128, 0.25);
+}
+.n0 {
+  grid-area: n0;
+}
+.n1 {
+  grid-area: n1;
+}
+.n2 {
+  grid-area: n2;
+}
+.n3 {
+  grid-area: n3;
+}
+.n4 {
+  grid-area: n4;
+}
+.n5 {
+  grid-area: n5;
+}
+.n6 {
+  grid-area: n6;
+}
+.n7 {
+  grid-area: n7;
+}
+.n8 {
+  grid-area: n8;
+}
+.n9 {
+  grid-area: n9;
+}
+
+.period {
+  grid-area: period;
+}
+.percent {
+  grid-area: percent;
+}
+
+.division {
+  grid-area: division;
+}
+
+.multiply {
+  grid-area: multiple;
+}
+
+.minus {
+  grid-area: minus;
+}
+
+.addition {
+  grid-area: addition;
+}
+
+.clear {
+  grid-area: clear;
+}
+
+.equal {
+  grid-area: equal;
+}
+
+.conter {
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  /* background: red; */
+  width: 70%;
+  height: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  flex-direction: column;
+  /* flex-direction: column; */
+  /* justify-items: legacy; */
+  /* justify-content: end; */
+  overflow: hidden;
+}
+
+.conterInner {
+  width: 70%;
+  height: 20%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center;
+  /* background: green; */
+  z-index: 100;
+  order: 1;
+}
+.conterInner:nth-child(1) {
+  order: 0;
+}
+.conterInner > h1 {
+  word-wrap: break-word;
+  color: white;
+  font-size: larger;
+}
+.conterInner > h1:nth-child(3) {
+  text-align: center;
+}
+.conterInner > h1:nth-child(2) {
+  text-align: center;
+}
